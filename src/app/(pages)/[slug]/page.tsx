@@ -11,7 +11,7 @@ import { Blocks } from '../../_components/Blocks'
 import { Hero } from '../../_components/Hero'
 import { generateMeta } from '../../_utilities/generateMeta'
 import { Gutter } from '../../_components/Gutter'
-
+import Promotion from '../../_components/Promotion'
 import classes from "./index.module.scss"
 import Categories from "../../_components/Categories"
 // Payload Cloud caches all files through Cloudflare, so we don't need Next.js to cache them as well
@@ -63,6 +63,7 @@ export default async function Page({ params: { slug = 'home' } }) {
           <Gutter className={classes.home}>
             
             <Categories categories={categories}></Categories>
+            <Promotion/>
           </Gutter>
         </section>
       ) : ( 
